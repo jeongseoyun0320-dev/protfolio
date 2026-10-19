@@ -73,20 +73,20 @@
         <p class="heading-note">아이디어를 현실로 만들고<br>더 나은 내일을 디자인합니다.</p>
       </div>
       <div class="project-grid">
-        <article class="project-card project-card--lime" data-project="mellow">
+        <article class="project-card project-card--lime" data-project="mellow" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-modal" aria-label="Mellow Coffee 프로젝트 상세 보기">
           <div class="card-top"><span>01 / 03</span><span>Brand · Web</span></div>
           <div class="project-art art-mellow"><div class="sun"></div><div class="art-word">mellow</div><div class="art-shape"></div></div>
-          <div class="card-content"><h3>Mellow Coffee</h3><p>취향을 발견하는 커피 구독 서비스</p><button class="project-link" type="button">View project <span>↗</span></button></div>
+          <div class="card-content"><h3>Mellow Coffee</h3><p>취향을 발견하는 커피 구독 서비스</p><span class="project-link" aria-hidden="true">View project <span>↗</span></span></div>
         </article>
-        <article class="project-card project-card--lavender" data-project="orbit">
+        <article class="project-card project-card--lavender" data-project="orbit" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-modal" aria-label="Orbit Finance 프로젝트 상세 보기">
           <div class="card-top"><span>02 / 03</span><span>Product · UX</span></div>
           <div class="project-art art-orbit"><div class="planet"></div><div class="ring ring-one"></div><div class="ring ring-two"></div><span class="star star-one">✦</span><span class="star star-two">✦</span></div>
-          <div class="card-content"><h3>Orbit Finance</h3><p>더 쉬운 투자를 위한 금융 경험</p><button class="project-link" type="button">View project <span>↗</span></button></div>
+          <div class="card-content"><h3>Orbit Finance</h3><p>더 쉬운 투자를 위한 금융 경험</p><span class="project-link" aria-hidden="true">View project <span>↗</span></span></div>
         </article>
-        <article class="project-card project-card--peach" data-project="sori">
+        <article class="project-card project-card--peach" data-project="sori" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="project-modal" aria-label="Sori Archive 프로젝트 상세 보기">
           <div class="card-top"><span>03 / 03</span><span>Identity · App</span></div>
           <div class="project-art art-sori"><div class="sori-circle circle-one"></div><div class="sori-circle circle-two"></div><div class="sori-circle circle-three"></div><div class="sori-text">소리의<br>온도</div></div>
-          <div class="card-content"><h3>Sori Archive</h3><p>일상의 소리를 기록하는 아카이브</p><button class="project-link" type="button">View project <span>↗</span></button></div>
+          <div class="card-content"><h3>Sori Archive</h3><p>일상의 소리를 기록하는 아카이브</p><span class="project-link" aria-hidden="true">View project <span>↗</span></span></div>
         </article>
       </div>
     </section>
@@ -120,12 +120,18 @@
 
   <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-content">
+    <div class="modal-content" tabindex="-1">
       <button class="modal-close" type="button" aria-label="프로젝트 상세 닫기" data-close-modal>×</button>
       <p class="section-label">PROJECT DETAIL</p>
       <h2 id="modal-title"></h2>
-      <p id="modal-description"></p>
+      <p class="modal-example-note" id="modal-example-note">아래 프로젝트 상세 정보는 이해를 돕기 위한 예시이며 실제 프로젝트 정보가 아닙니다.</p>
+      <p class="modal-detail-copy" id="modal-description"></p>
+      <h3 class="modal-detail-label">담당 역할</h3>
+      <p class="modal-detail-copy" id="modal-role"></p>
+      <h3 class="modal-detail-label">사용 기술</h3>
       <div class="modal-tags" id="modal-tags"></div>
+      <h3 class="modal-detail-label">주요 성과</h3>
+      <ul class="modal-achievements" id="modal-achievements"></ul>
     </div>
   </div>
 </body>
